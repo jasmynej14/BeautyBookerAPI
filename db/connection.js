@@ -2,7 +2,7 @@ require('dotenv').config()
 const pgp = require('pg-promise')(/* options */)
 
 const connection = {
-    connectionString:process.env.DB_CONNECTION,
+    connectionString:'postgres://afoyxmtaxrksyb:c1b5948ebc51405ea25533451ddf9dc728fa21a5fb2db83ffcc829ea90656f4f@ec2-18-209-143-227.compute-1.amazonaws.com:5432/d5kqruaos8opcg',
     ssl:{
         rejectUnauthorized:false
     }
@@ -10,4 +10,4 @@ const connection = {
 
 const db = pgp(connection);
 
-export default db;
+module.exports = db;
